@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './components/app';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import store from './store';
+import SpellbookService from './services';
+import { SpellbookContext } from './contexts';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const service = new SpellbookService();
+
+
+ReactDOM.render(
+  <SpellbookContext.Provider value={service}>
+    <Provider store={store}>
+        <App />
+    </Provider>
+  </SpellbookContext.Provider>,
+ document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

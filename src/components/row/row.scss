@@ -1,0 +1,21 @@
+.rows {
+  margin: 0 auto;
+  width: 1100px;
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  transition: 1s;
+  animation: show 1s;
+  &-hidden {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

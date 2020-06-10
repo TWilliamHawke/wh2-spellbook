@@ -1,0 +1,105 @@
+.dial-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.432);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  z-index: 7;
+}
+
+.dial-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 485px;
+  margin: 0 60px;
+}
+
+.dial-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+  background:  url(./img/spell_dial_magic_container.png) center center no-repeat;
+}
+
+.dial-center {
+  box-shadow: inset 0 0 25px rgb(23, 179, 184);
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  height: 93px;
+  width: 93px;
+  background:  url(./img/spell_dial_glow.png) center center no-repeat;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(./img/icon_cross.png) center center no-repeat;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    box-shadow: inset 0 0 25px rgb(23, 179, 184), inset 0 0 25px rgba(233, 210, 5, 0.384);
+  }
+  &:active {
+    box-shadow: inset 0 0 25px rgb(23, 179, 184);
+    opacity: 0.5;
+  }
+}
+
+.dial-item {
+  background: none;
+  border: none;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  
+}
+.dial-item-0, .dial-item-3 {
+  left: 96px;
+}
+.dial-item-0 {
+  position: absolute;
+  top: -3px;
+}
+.dial-item-3 {
+  position: absolute;
+  top: 175px;
+}
+.dial-item-1, .dial-item-2 {
+  left: 174px;
+}
+.dial-item-1, .dial-item-5 {
+  position: absolute;
+  top: 42px;
+}
+.dial-item-2, .dial-item-4 {
+  position: absolute;
+  top: 132px;
+}
+.dial-item-4, .dial-item-5 {
+  left: 19px;
+}

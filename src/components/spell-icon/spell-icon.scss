@@ -1,0 +1,29 @@
+.spell-icon-frame {
+  background:  url(./img/spell_dial_spell_frame_mask.png) center center no-repeat;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.spell-icon {
+  background-position: center center;
+  width: 65px;
+  height: 65px;
+  &-hover {
+    width: 59px;
+    height: 59px;
+    border-radius: 50px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: inset 0 0 15px rgb(23, 179, 184);
+    }
+    &:active {
+      box-shadow: inset 0 0 18px rgba(19, 145, 150, 0.829);
+    }
+  }
+}

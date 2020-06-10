@@ -1,0 +1,27 @@
+$h2color: #222;
+
+.school-main {
+  h2 {
+    display: inline-block;
+    position: relative;
+    color: $h2color;
+    &::before, &:after {
+      content: '';
+      width: 80px;
+      height: 2px;
+      background: $h2color;
+      position: absolute;
+      top: 22px;
+    }
+    &::before {
+      left: -88px;
+    }
+    &::after {
+      right: -88px;
+    }
+  }
+  color: #222;
+  width: 45%;
+  height: 100%;
+}
+
